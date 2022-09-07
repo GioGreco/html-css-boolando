@@ -79,6 +79,7 @@ header nav .select-genre, header nav .logo{
 
 header nav .logo img{
     width: 100%;
+    transform: translate(-30%,0);
 }
 
 header nav .icons{
