@@ -18,7 +18,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #ff6801;
+    background-color: var(--orange);
     z-index: 100;
 }
 
@@ -42,6 +42,7 @@
 
 body{
     font-family: Arial, Helvetica, sans-serif;
+    min-width: 1170px;
 }
 
 a{
@@ -49,20 +50,24 @@ a{
     color: white;
 }
 
+a:hover{
+    text-decoration: underline;
+}
+
 ul{
     list-style: none;
 }
 
+s{
+    color: black;
+}
+
 /* HEADER STYLE */
 header nav{
-    min-height: 60px;
+    height: 60px;
 }
 
-header nav .select-genre{
-    width: 160px;
-}
-
-header nav .logo{
+header nav .select-genre, header nav .logo{
     width: 160px;
 }
 
@@ -72,4 +77,93 @@ header nav .logo img{
 
 header nav .icons{
     width: 80px;
+}
+
+/* MAIN STYLE */
+main{
+    margin-top: 60px;
+    padding: 50px 0;
+}
+
+main .row:first-of-type{
+    margin-bottom: 40px;
+}
+
+main .row .col{
+    position: relative;
+    width: calc((100% - 20px) / 3);
+    cursor: pointer;
+}
+
+main .row .col:nth-of-type(2){
+    margin: 0 10px;
+}
+
+/* Item Preview style section */
+main .row .col .item-preview{
+    position: relative;
+}
+
+main .row .col .item-preview img{
+    width: 100%;
+}
+
+main .row .col .item-preview .on-hover.second{
+    display: none;
+}
+
+main .row .col .item-preview:hover .on-hover.second{
+    display: inline-block;
+}
+
+main .row .col .item-preview:hover .on-hover.first{
+    display: none;
+}
+
+main .row .col .item-preview .heart{
+    position: absolute;
+    right: 0;
+    top: 10px;
+    background-color: white;
+    font-size: 25px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+main .row .col .item-preview .heart:hover{
+    color: red;
+}
+
+main .row .col .item-preview .features{
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    color: white;
+    font-size: 12px;
+}
+
+main .row .col .item-preview .features *{
+    padding: 3px;
+}
+
+main .row .col .item-preview .features .discount{
+    background-color: var(--red-discount);
+}
+
+main .row .col .item-preview .features .eco-friendly{
+    background-color: var(--green-eco);
+}
+
+/* Item Specifics style section */
+main .row .col .item-specs .brand, main .row .col .item-specs .price{
+    font-size: 8px;
+}
+
+main .row .col .item-specs .item-name{
+    font-size: 10px;
+}
+
+main .row .col .item-specs .price{
+    color: var(--red-discount);
 }
