@@ -13,6 +13,12 @@
     --red-price: #ff345a;
 }
 
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
 .fixed{
     position: fixed;
     top: 0;
@@ -166,4 +172,34 @@ main .row .col .item-specs .item-name{
 
 main .row .col .item-specs .price{
     color: var(--red-discount);
+}
+
+/* FOOTER STYLE */
+
+footer{
+    min-height: 70px;
+    background-color: var(--black-footer);
+    color: white;
+}
+
+footer .policies{
+    float: left;
+    font-size: 15px;
+}
+
+footer .policies ul{
+    font-size: 8px;
+    width: 230px;
+}
+
+footer .social{
+    float: right;
+}
+
+footer .social ul{
+    width: 100px;
+}
+
+footer ul{
+    padding-top: 10px;
 }
